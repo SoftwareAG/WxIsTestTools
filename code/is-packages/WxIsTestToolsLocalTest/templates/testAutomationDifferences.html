@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="/WxIsTestTools/css/base.css" />
+<link rel="stylesheet" type="text/css" href="/WxIsTestTools/css/tree.css" />
+<script type="text/javascript" src="/WxIsTestTools/js/tree.js.txt" ></script>
+<script type="text/javascript">
+<!--
+function doneLoading()
+{
+	alternateColorTable(document.getElementById("diffTab"),"#FAFAFA","#EFEFEF");
+}
+
+-->
+</script>
+<title>Automated test results</title>
+</head>
+
+<body onload="doneLoading()">
+<h1>Automated test results</h1>
+
+<h2>Tested service: %value flowDir%:%value flowName%&nbsp;%ifvar testPassed equals('true')%<div style="color: green; display: inline">PASSED</div>%else%<div style="color: red; display: inline">FAILED</div>%endif%</h2>
+
+<table id="diffTab" width="100%" border="1" style="font-family: Tahoma, Serif; font-size: 12px" cellspacing="0" cellpadding="2px">
+
+<tr>
+<th colspan="3">Input</th>
+<th colspan="2">Expected Output</th>
+<th colspan="2">Actual Output</th>
+</tr>
+<tr>
+<td colspan="3">%value flowInputXhtml encode(none)%</td>
+<td colspan="2">%value expectedOutputXhtml encode(none)%</td>
+<td colspan="2">%value actualOutputXhtml encode(none)%</td>
+</tr>
+
+
+<tr>
+<th>Key</th>
+<th>Equal</th>
+<th>Difference detail</th>
+<th colspan="2">Expected</th>
+<th colspan="2">Actual</th>
+
+</tr>
+%loop comparisonResults%
+<tr>
+<td rowspan="4">%value key%</td>
+<td rowspan="4">
+%ifvar bEqual equals('true')%
+<div style="color: green">PASSED</div>
+%else%
+<div style="color: red">FAILED</div>
+%endif%
+</td>
+<td rowspan="4">%value diffDetails%</td>
+<td>Absent:</td>
+<td>%value expected/bAbsent%</td>
+<td>Absent:</td>
+<td>%value actual/bAbsent%</td>
+</tr>
+<tr>
+<td>Null:</td>
+<td>%value expected/bNull%</td>
+<td>Null:</td>
+<td>%value actual/bNull%</td>
+</tr>
+<tr>
+<td>Class:</td>
+<td>%value expected/instanceOf%</td>
+<td>Class:</td>
+<td>%value actual/instanceOf%</td>
+</tr>
+<tr>
+<td colspan="2">%value expectedValueXhtml encode(none)%</td>
+<td colspan="2">%value actualValueXhtml encode(none)%</td>
+</tr>
+
+
+%endloop% 
+</table>
+
+
+</body>
+</html>

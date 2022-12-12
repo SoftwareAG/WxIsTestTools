@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="node_type">interface</value>
+  <value name="node_nsName">wx.isUtilities.arrays.j</value>
+  <value name="is_public">false</value>
+  <value name="shared">cHJpdmF0ZSBzdGF0aWMgUGlwZWxpbmVFbGVtZW50SW5mbyBnZXRPYmplY3RGb3JLZXlGcm9tSURh
+dGEoU3RyaW5nIGtleSwgSURhdGEgcmVjb3JkKXsKCVBpcGVsaW5lRWxlbWVudEluZm8gcGVpID0g
+bmV3IFBpcGVsaW5lRWxlbWVudEluZm8oKTsKCQoJaW50IGlkb2YgPSBrZXkuaW5kZXhPZigiLyIp
+OwoJaWYoMDxpZG9mKQoJewoJCVN0cmluZyB0aGlzSWRhdGFLZXkgPSBrZXkuc3Vic3RyaW5nKDAs
+IGlkb2YpOwoJCVN0cmluZyBuZXh0S2V5ID0ga2V5LnN1YnN0cmluZyhpZG9mKzEpOwoJfQoJCgly
+ZXR1cm4gcGVpOwp9Cgpwcm90ZWN0ZWQgc3RhdGljIGNsYXNzIFBpcGVsaW5lRWxlbWVudEluZm8g
+ewoJcHJvdGVjdGVkIGJvb2xlYW4gYkFic2VudCA9IHRydWU7Cglwcm90ZWN0ZWQgYm9vbGVhbiBi
+TnVsbCA9IGZhbHNlOwoJcHJvdGVjdGVkIE9iamVjdCBvYmogPSBudWxsOwp9Cgpwcml2YXRlIHN0
+YXRpYyB2b2lkIGFwcGVuZEtleXMoQXJyYXlMaXN0PFN0cmluZz4gYXJyS2V5cywgSURhdGEgaW4s
+IFN0cmluZyBmYXRoZXJLZXksIGphdmEuaW8uU3RyaW5nV3JpdGVyIG91dCkgdGhyb3dzIFNlcnZp
+Y2VFeGNlcHRpb24KewoJSURhdGFDdXJzb3IgaWRjID0gaW4uZ2V0Q3Vyc29yKCk7CglTdHJpbmcg
+YmFzZUtleT0iIjsKCWlmKCFmYXRoZXJLZXkuY29udGVudEVxdWFscyhiYXNlS2V5KSkKCQliYXNl
+S2V5ID0gZmF0aGVyS2V5ICsgIi8iOwoJZm9yIChpbnQgaT0wOyBpZGMubmV4dCgpOyBpKyspCgl7
+CgkJU3RyaW5nIGtleSA9IChTdHJpbmcpIGlkYy5nZXRLZXkoKTsKCQlhcnJLZXlzLmFkZChiYXNl
+S2V5K2tleSk7CgkJT2JqZWN0IHZhbCA9IGlkYy5nZXRWYWx1ZSgpOwoJCWlmICh2YWwgaW5zdGFu
+Y2VvZiBjb20ud20udXRpbC5jb2Rlci5JRGF0YUNvZGFibGUpCgkJewoJCQl2YWwgPSAoKGNvbS53
+bS51dGlsLmNvZGVyLklEYXRhQ29kYWJsZSl2YWwpLmdldElEYXRhKCk7CgkJCWFwcGVuZEtleXMo
+YXJyS2V5cywgKElEYXRhKXZhbCwgYmFzZUtleSArIGtleSwgb3V0KTsKCQl9CgkJZWxzZSBpZiAo
+dmFsIGluc3RhbmNlb2YgSURhdGFbXSkKCQl7CgkJCUlEYXRhW10gaWRhID0gKElEYXRhW10pdmFs
+OwoJCQlmb3IgKGludCBsPTA7IGw8aWRhLmxlbmd0aDsgbCsrKQoJCQl7CgkJCQlhcHBlbmRLZXlz
+KGFycktleXMsIGlkYVtsXSwgYmFzZUtleSArIGtleSArICJbIiArIGwgKyAiXSIsIG91dCk7CgkJ
+CX0KCQl9CgkJZWxzZSBpZiAodmFsIGluc3RhbmNlb2YgSURhdGEpCgkJewoJCQlhcHBlbmRLZXlz
+KGFycktleXMsIChJRGF0YSl2YWwsIGJhc2VLZXkgKyBrZXksIG91dCk7CgkJfQoJCWVsc2UgaWYg
+KHZhbCBpbnN0YW5jZW9mIGNvbS53bS51dGlsLmNvZGVyLklEYXRhQ29kYWJsZVtdKQoJCXsKCQkJ
+Y29tLndtLnV0aWwuY29kZXIuSURhdGFDb2RhYmxlW10gaWRhID0gKGNvbS53bS51dGlsLmNvZGVy
+LklEYXRhQ29kYWJsZVtdKXZhbDsKCQkJZm9yIChpbnQgbD0wOyBsPGlkYS5sZW5ndGg7IGwrKykK
+CQkJewoJCQkJYXBwZW5kS2V5cyhhcnJLZXlzLCBpZGFbbF0uZ2V0SURhdGEoKSwgYmFzZUtleSAr
+IGtleSArICJbIiArIGwgKyAiXSIsIG91dCk7CgkJCX0KCQl9Cgl9CglpZGMuZGVzdHJveSgpOwp9
+CgkJ</value>
+  <value name="encodeutf8">true</value>
+  <value name="extends"></value>
+  <array name="implements" type="value" depth="1">
+  </array>
+  <array name="imports" type="value" depth="1">
+    <value>com.wm.lang.ns.NSService</value>
+    <value>java.util.ArrayList</value>
+    <value>java.util.Arrays</value>
+    <value>java.util.HashSet</value>
+    <value>java.util.Iterator</value>
+  </array>
+</Values>

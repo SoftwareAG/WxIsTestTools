@@ -1,0 +1,18 @@
+.div{
+  display: block;
+  margin-left: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 12px;
+  font-family: "Verdana", sans-serif;
+}
+
+h1 {
+    color: #04B2E0;
+}
+.sectionTitle{
+  display: inline;
+  font-size: 20px;
+  font-family: "Verdana", sans-serif;
+  color: #04B2E0;
+}

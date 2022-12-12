@@ -1,0 +1,100 @@
+function showBranch(branch){
+  var objBranch  = document.getElementById(branch).style;
+  var objTrigger = document.getElementById("I"+branch);
+  if(objBranch.display=="block")
+  {
+    objBranch.display="none";
+    objTrigger.innerHTML = '+';
+  }
+  else
+  {
+    objBranch.display="block";
+    objTrigger.innerHTML = '-';
+  }
+}
+
+function alternateColorTable(oHTMLTableElement, oddColor, evenColor)
+{
+  var odd = 1;
+  for(var iTBODY=0;iTBODY<oHTMLTableElement.tBodies.length;iTBODY++)
+  {
+    oTBODY = oHTMLTableElement.tBodies[iTBODY];
+    for(var iROW=0;iROW<oTBODY.rows.length;iROW++)
+    {
+      oROW = oTBODY.rows[iROW];
+      oROW.bgColor = (odd==0?evenColor:oddColor);
+      odd = 1-odd;
+    }
+  }
+}
+
+function refreshOpener()
+{
+	if (opener && !opener.closed) opener.location.reload(true);
+}
+
+function closeAndRefreshOpener()
+{
+  refreshOpener();
+  self.close();
+}
+
+function setBlankTarget4ID(objectID)
+{
+  var o4Blnk = document.getElementById(objectID);
+  if(undefined != o4Blnk)
+    setBlankTarget(o4Blnk);
+  else
+    alert("Object with id '"+objectID+"' does not exist in this page");
+}
+
+function setBlankTarget(objTrg)
+{
+  if((undefined !=objTrg) && (null != objTrg))
+  {
+    objTrg.target = "_blank";
+    if("_blank" != objTrg.target)
+      alert("Cannot set _blank target for object with id: " + objTrg.id);
+  }
+  else
+    alert("Null or inexistent object!");
+}
+
+
+
+
+function fillDivFromURL(id, url)
+{
+	var xmlHttp;
+	try {// Firefox, Opera 8.0+, Safari
+			xmlHttp = new XMLHttpRequest();		
+		} catch (e) {// Internet Explorer
+			try {
+				xmlHttp = new ActiveXObject("Msxml2.XMLHTTP");
+			} catch (e) {
+				try {
+					xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+				} catch (e) {
+					alert("Your browser does not support AJAX!");
+					return false;
+				}
+			}
+		}
+		
+		xmlHttp.onreadystatechange = function(){
+			if (xmlHttp.readyState == 4) {
+				//Get the response from the server and extract the section that comes in the body section of the second html page avoid inserting the header part of the second page in your first page's element
+				elem.innerHTML = xmlHttp.responseText;
+			}
+		}
+
+		var elem = document.getElementById(id);
+		if (!elem) {
+			alert('The element with the passed ID doesn\'t exists in your page');
+			return;
+		}
+	
+		xmlHttp.open("GET", url, true);
+		xmlHttp.send(null);
+	}	
+

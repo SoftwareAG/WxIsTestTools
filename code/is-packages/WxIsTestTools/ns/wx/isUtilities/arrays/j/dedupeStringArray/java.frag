@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="name">dedupeStringArray</value>
+  <value name="encodeutf8">true</value>
+  <value name="body">Ly8gcGlwZWxpbmUNCklEYXRhQ3Vyc29yIHBpcGVsaW5lQ3Vyc29yID0gcGlwZWxpbmUuZ2V0Q3Vy
+c29yKCk7DQoJU3RyaW5nW10Jc3RyQXJyYXkgPSBJRGF0YVV0aWwuZ2V0U3RyaW5nQXJyYXkoIHBp
+cGVsaW5lQ3Vyc29yLCAic3RyQXJyYXkiICk7DQpwaXBlbGluZUN1cnNvci5kZXN0cm95KCk7DQoN
+Ckhhc2hTZXQ8U3RyaW5nPiBocyA9IG5ldyBIYXNoU2V0PFN0cmluZz4oKTsNCmlmKG51bGwgIT0g
+c3RyQXJyYXkgJiYgc3RyQXJyYXkubGVuZ3RoPjApDQoJZm9yKGludCBpPTA7IGk8c3RyQXJyYXku
+bGVuZ3RoO2krKykNCgkJaHMuYWRkKHN0ckFycmF5W2ldKTsNCg0KU3RyaW5nW10ga2E9IGhzLnRv
+QXJyYXkobmV3IFN0cmluZ1swXSk7DQpBcnJheXMuc29ydChrYSk7DQoJCQkNCmlmKDA8aHMuc2l6
+ZSgpKQ0Kew0KCS8vIHBpcGVsaW5lDQoJcGlwZWxpbmVDdXJzb3IgPSBwaXBlbGluZS5nZXRDdXJz
+b3IoKTsNCglJRGF0YVV0aWwucHV0KCBwaXBlbGluZUN1cnNvciwgInN0ckFycmF5UmVzdWx0Iiwg
+a2EgKTsNCglwaXBlbGluZUN1cnNvci5kZXN0cm95KCk7DQp9DQoJ</value>
+</Values>

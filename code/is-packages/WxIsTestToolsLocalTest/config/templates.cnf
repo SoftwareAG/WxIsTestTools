@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <record name="templates" javaclass="com.wm.util.Values">
+    <record name="viewPipelineXhtmlDump.html" javaclass="com.wm.util.Values">
+      <value name="encoding">UTF8</value>
+    </record>
+    <record name="testAutomationDifferences.html" javaclass="com.wm.util.Values">
+      <value name="encoding">UTF8</value>
+    </record>
+  </record>
+</Values>

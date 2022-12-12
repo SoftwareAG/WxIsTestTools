@@ -1,0 +1,205 @@
+package wx.isUtilities.html;
+
+// -----( IS Java Code Template v1.2
+
+import com.wm.data.*;
+import com.wm.util.Values;
+import com.wm.app.b2b.server.Service;
+import com.wm.app.b2b.server.ServiceException;
+// --- <<IS-START-IMPORTS>> ---
+import com.wm.lang.ns.NSService;
+import java.util.ArrayList;
+// --- <<IS-END-IMPORTS>> ---
+
+public final class j
+
+{
+	// ---( internal utility methods )---
+
+	final static j _instance = new j();
+
+	static j _newInstance() { return new j(); }
+
+	static j _cast(Object o) { return (j)o; }
+
+	// ---( server methods )---
+
+
+
+
+	public static final void document2XHTMLtree (IData pipeline)
+        throws ServiceException
+	{
+		// --- <<IS-START(document2XHTMLtree)>> ---
+		// @sigtype java 3.5
+		// [i] field:0:optional baseID
+		// [i] record:0:required record
+		// [o] field:0:required htmlOut
+		IDataCursor id = pipeline.getCursor();
+		
+		// get the optional string parameter. only will use the first occurrence
+		// of the message element
+		String    msg = IDataUtil.getString( id, "baseID" );
+		IData	  rec = IDataUtil.getIData( id, "record" );
+		id.destroy();
+		
+		String htmlOut = null;
+		
+		
+		if ( null != rec ){ 
+		
+			if ( msg == null )
+				msg = "defa" + System.currentTimeMillis();
+			
+			
+			// see the Shared tab for dumpIData that walks the IData tree
+			java.io.StringWriter s = new java.io.StringWriter();
+			
+			writeXHTML("record", rec, 0, s, msg, true);
+			htmlOut = s.toString();
+		}
+		
+		// pipeline
+		IDataCursor pipelineCursor = pipeline.getCursor();
+		IDataUtil.put( pipelineCursor, "htmlOut", htmlOut);
+		pipelineCursor.destroy();
+			
+		// --- <<IS-END>> ---
+
+                
+	}
+
+	// --- <<IS-START-SHARED>> ---
+	private static void writeXHTML(String myKey, IData in, int indent, java.io.StringWriter out, String idHTML, boolean bRoot) throws ServiceException
+	{
+		IDataCursor idc = in.getCursor();
+		if(!bRoot)
+		{
+			out.write("<div class='trigger' style=\"width: 100%\"");
+			out.write(" id='t"+idHTML+"' onclick=\"showBranch('b"+idHTML+"')\">");
+			out.write("<div class='ei' id=\"Ib"+idHTML+"\">+</div>");
+			out.write(myKey);
+			out.write("</div>"); 
+			out.write("<div class='branch' id='b"+idHTML+"'>");
+		}
+		for (int i=0; idc.next(); i++)
+		{
+			String key = (String) idc.getKey();
+			Object val = idc.getValue();
+			if (val instanceof com.wm.util.coder.IDataCodable)
+			{
+				val = ((com.wm.util.coder.IDataCodable)val).getIData();
+			}
+			if (val instanceof String[][])
+			{
+				out.write("<div class='trigger' style=\"width: 100%\"");
+				out.write(" id='t2"+i+idHTML+"' onclick=\"showBranch('b2"+i+idHTML+"')\">");
+	    		out.write("<div class='ei' id=\"Ib2"+i+idHTML+"\" >+</div>");
+	    		out.write("<div style='color: gray;display: inline'>(java.lang.String[][])</div>");
+				out.write(key);
+				out.write("</div>"); 
+				out.write("<div class='branch' id='b2"+i+idHTML+"'>");
+				String[][] st = (String[][])val;
+				for (int k=0; k<st.length; k++)
+				{
+					for (int j=0; j<st[0].length; j++)
+					{
+						if(key.equalsIgnoreCase("password"))
+							st[k][j]="*";
+						out.write("<div><div style='color: red;display:inline'>["+k+"]["+j+"]</div> = <div style='color: blue;display:inline'>" + HTMLEncodeEventuallyXML(st[k][j])+"</div></div>");
+					}
+				}
+				out.write("</div>");
+	
+			}
+			else if (val instanceof String[])
+			{
+				String[] sa = (String[])val;
+				out.write("<div class='trigger' style=\"width: 100%\"");
+				out.write(" id='t1"+i+idHTML+"' onclick=\"showBranch('b1"+i+idHTML+"')\">");
+	    		out.write("<div class='ei' id=\"Ib1"+i+idHTML+"\">+</div>");
+	    		out.write("<div style='color: gray;display: inline'>(java.lang.String[])</div>");
+				out.write(key);
+				out.write("</div>"); 
+				out.write("<div class='branch' id='b1"+i+idHTML+"'>");
+				for (int k=0; k<sa.length; k++)
+				{
+					if(key.equalsIgnoreCase("password"))
+						sa[k]="*";				
+					out.write("<div><div style='color: red;display:inline'>["+k+"]</div> = <div style='color: blue;display:inline'>" + HTMLEncodeEventuallyXML(sa[k])+"</div></div>");
+				}
+				out.write("</div>");
+			}
+			else if (val instanceof IData[])
+			{
+				IData[] ida = (IData[])val;
+				for (int l=0; l<ida.length; l++)
+				{
+					writeXHTML(key, ida[l], indent+1, out, idHTML + "_" + i + "_A_" + l, false);
+				}
+			}
+			else if (val instanceof IData)
+			{
+				writeXHTML(key, (IData)val, indent+1, out, idHTML + "_0_" + i, false);
+			}
+			else if (val instanceof com.wm.util.coder.IDataCodable[])
+			{
+				com.wm.util.coder.IDataCodable[] ida = (com.wm.util.coder.IDataCodable[])val;
+				for (int l=0; l<ida.length; l++)
+				{
+					writeXHTML(key, ida[l].getIData(), indent+1, out, idHTML + "_B_" + i + "_" + l, false);
+				}
+			}
+			else if(null == val){
+				out.write("<div style='color: gray'>(null)<div style='color: red;display:inline'>"+ key + "</div></div>");
+			}
+			else if (val instanceof byte[]){
+				out.write("<div style='color: gray'>(byte[])<div style='color: red;display:inline'>"+
+						key + "</div> = <div style='color: blue;display:inline'>*</div></div>");
+			}
+			else if (val.getClass().isArray()){
+				Object[] oa = (Object[]) val;
+				out.write("<div class='trigger' style=\"width: 100%\"");
+				out.write(" id='t1" + i + idHTML + "' onclick=\"showBranch('b1" + i + idHTML + "')\">");
+				out.write("<div class='ei' id=\"Ib1" + i + idHTML + "\">+</div>");
+				out.write("<div style='color: gray;display: inline'>(java.lang.Object[])</div>");
+				out.write(key);
+				out.write("</div>");
+				out.write("<div class='branch' id='b1" + i + idHTML + "'>");
+				for (int k = 0; k < oa.length; k++) {
+					if (key.equalsIgnoreCase("password"))
+						oa[k] = "*";
+					if(null == oa[k]){
+						out.write("<div><div style='color: red;display:inline'>(null)[" + k +"]</div></div>");
+					}else{
+						out.write("<div><div style='color: red;display:inline'>" + oa[k].getClass().getCanonicalName()
+								+ "[" + k + "]</div> = <div style='color: blue;display:inline'>"
+								+ HTMLEncodeEventuallyXML(oa[k].toString()) + "</div></div>");
+					}
+				}
+				out.write("</div>");
+			}
+			else
+			{
+				if(key.equalsIgnoreCase("password"))
+					val="*";
+	
+				out.write("<div style='color: gray'>("+val.getClass().getName()+")<div style='color: red;display:inline'>"+key + "</div> = <div style='color: blue;display:inline'>" + HTMLEncodeEventuallyXML(""+val)+"</div></div>");
+			}
+		}
+		idc.destroy();
+		if(!bRoot)
+			out.write("</div>");
+	}
+	
+	private static String HTMLEncodeEventuallyXML(String xmlString)
+	{
+		if(null==xmlString)
+			return "";	
+		return com.wm.util.xform.StringDT.HTMLEncode(xmlString);
+	}
+	
+		
+	// --- <<IS-END-SHARED>> ---
+}
+

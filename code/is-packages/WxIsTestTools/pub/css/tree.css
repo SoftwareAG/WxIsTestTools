@@ -1,0 +1,32 @@
+   .trigger{
+      cursor: pointer;
+      display: block;
+      margin-left: 0px;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      font-size: 12px;
+      font-family: "Verdana", sans-serif;
+   }
+   .branch{
+      display: none;
+      margin-left: 10px;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      font-size: 12px;
+      font-family: "Verdana", sans-serif;
+   }
+   .ei{
+      display: inline;
+      margin-left: 0px;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      font-family: 16pt "Courier New",serif;
+   }
+   .div{
+      display: block;
+      margin-left: 0px;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      font-size: 12px;
+      font-family: "Verdana", sans-serif;
+   }
