@@ -5,7 +5,9 @@ Although not a very frequent pattern, the package may also be used for productio
 
 ## Quick start for verification
 
-Start the docker compose project in run-configurations/is-test-tools-dev1.
+Go into `run-configurations/is-test-tools-dev1` folder and initialize a file called '.env' as in the provided example. Alternatively ensure that the required environment variables are provided.
+
+Start the docker compose project in `run-configurations/is-test-tools-dev1`.
 
 You may see an example run with its results at the below URL
 
