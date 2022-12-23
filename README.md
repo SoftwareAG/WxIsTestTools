@@ -22,3 +22,6 @@ Documents have a `+` sign in front of them, indicating they can be expanded.
 This package can be used to test flow services present on the same IS/MSR instance or some other remote instance. In the first case it can work as a unit testing capability, in the second as a service testing capability.
 
 Generally, for local unit testing, as shown in this project, if `serviceA` is the service to be tested, present in `packageA`, then generate a `packageALocalTest` package and a test harness flow service following the model flow `wx.isUtilities.test.automation:testAutom1`. This harness hill have to prepare all the input the data for the service `wx.isUtilities.testAutomation:invokeServiceAndCheckOutput`, which will actually call the tested service and discuss the results in detail the outcome. It's output will be presented on web pages by the means of the template `testAutomationDifferences`
+
+______________________
+These tools are provided as-is and without warranty or support. They do not constitute part of the Software AG product suite. Users are free to use, fork and modify them, subject to the license agreement. While Software AG welcomes contributions, we cannot guarantee to include every contribution in the master project.	
