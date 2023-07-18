@@ -9,6 +9,8 @@ services:
       - ${HOST_MSR_LICENSE_FILE}:/tmp/license.xml
       - ./application.properties:/tmp/application.properties
       # Our Code
+      - ../../code/is-packages/WxAssert/:${GUEST_IS_HOME}/packages/WxAssert/
+      - ../../code/is-packages/WxAssertTest/:${GUEST_IS_HOME}/packages/WxAssertTest/
       - ../../code/is-packages/WxIsTestTools/:${GUEST_IS_HOME}/packages/WxIsTestTools/
       - ../../code/is-packages/WxIsTestToolsLocalTest/:${GUEST_IS_HOME}/packages/WxIsTestToolsLocalTest/
     environment:

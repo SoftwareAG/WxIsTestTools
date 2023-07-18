@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="name">getSuites</value>
+  <value name="encodeutf8">true</value>
+  <value name="body">Ly8gcGlwZWxpbmUNCg0KLy8gcGlwZWxpbmUNCklEYXRhQ3Vyc29yIHBpcGVsaW5lQ3Vyc29yID0g
+cGlwZWxpbmUuZ2V0Q3Vyc29yKCk7DQoNCi8vIHN1aXRlcw0KSURhdGFbXQlzdWl0ZXMgPSBuZXcg
+SURhdGFbc3VpdGVzSGFzaE1hcC5zaXplKCldOw0KaW50IGk9MDsNCmZvcihNYXAuRW50cnk8U3Ry
+aW5nLCBTdHJpbmc+IGVudHJ5OiBzdWl0ZXNIYXNoTWFwLmVudHJ5U2V0KCkpew0KCXN1aXRlc1tp
+XSA9IElEYXRhRmFjdG9yeS5jcmVhdGUoKTsNCglJRGF0YUN1cnNvciBzdWl0ZXNDdXJzb3IgPSBz
+dWl0ZXNbaSsrXS5nZXRDdXJzb3IoKTsNCglJRGF0YVV0aWwucHV0KCBzdWl0ZXNDdXJzb3IsICJu
+YW1lIiwgZW50cnkuZ2V0S2V5KCkgKTsNCglJRGF0YVV0aWwucHV0KCBzdWl0ZXNDdXJzb3IsICJm
+b2xkZXIiLCBlbnRyeS5nZXRWYWx1ZSgpICk7DQoJc3VpdGVzQ3Vyc29yLmRlc3Ryb3koKTsNCn0N
+Cg0KDQpJRGF0YVV0aWwucHV0KCBwaXBlbGluZUN1cnNvciwgInN1aXRlcyIsIHN1aXRlcyApOw0K
+cGlwZWxpbmVDdXJzb3IuZGVzdHJveSgpOw0KCQ==</value>
+</Values>
