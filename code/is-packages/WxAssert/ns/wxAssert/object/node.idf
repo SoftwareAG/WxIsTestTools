@@ -3,9 +3,12 @@
 <Values version="2.0">
   <value name="shared">cHJpdmF0ZSBmaW5hbCBzdGF0aWMgaW50IExPR19DT0RFPTQ7CnByaXZhdGUgZmluYWwgc3RhdGlj
 IGludCBMT0dfRkFDSUxJVFk9OTA7CnByaXZhdGUgZmluYWwgc3RhdGljIFN0cmluZyBMT0dfUFJF
-RklYPSJPYmplY3QgQXNzZXJ0aW9ucyI7Cg==</value>
+RklYPSJPYmplY3QgQXNzZXJ0aW9ucyI7Cgk=</value>
   <value name="encodeutf8">true</value>
   <array name="imports" type="value" depth="1">
     <value>com.wm.util.JournalLogger</value>
+  </array>
+  <value name="extends"></value>
+  <array name="implements" type="value" depth="1">
   </array>
 </Values>

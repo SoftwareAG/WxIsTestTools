@@ -32,41 +32,45 @@ public final class object
 		// --- <<IS-START(isNumber)>> ---
 		// @sigtype java 3.5
 		// [i] object:0:optional object
+		// [i] field:0:optional label
 		// [o] field:0:required bAssertionResult
 		boolean bResult=false;
 		// pipeline
 		IDataCursor pipelineCursor = pipeline.getCursor();
-			boolean bExists = pipelineCursor.first("object");
+			final boolean bExists = pipelineCursor.first("object");
 			Object	object = null;
 			if(bExists)
 				object = IDataUtil.get( pipelineCursor, "object" );
+			final String label = pipelineCursor.first("label")?(String)IDataUtil.get( pipelineCursor, "label" ):"isNumber";
 		pipelineCursor.destroy();
 		
+		
 		if (!bExists){
-			JournalLogger.log(LOG_CODE, LOG_FACILITY, JournalLogger.WARNING, LOG_PREFIX, "No input received");
+			JournalLogger.log(LOG_CODE, LOG_FACILITY, JournalLogger.WARNING, LOG_PREFIX+" "+label, "Failed: No input received");
 		}
 		else if( null == object ){
-			JournalLogger.log(LOG_CODE, LOG_FACILITY, JournalLogger.WARNING, LOG_PREFIX, "Null object received");
+			JournalLogger.log(LOG_CODE, LOG_FACILITY, JournalLogger.WARNING, LOG_PREFIX+" "+label, "Failed: Null object received");
 		}else if (object instanceof Number ){
 			bResult = true;
+			JournalLogger.log(LOG_CODE, LOG_FACILITY, JournalLogger.INFO, LOG_PREFIX+" "+label, "OK: Assertion passed!");
 		}else if(object instanceof String ){
 			try{
 				double d=Double.parseDouble((String)object);
 				bResult = true;
+				JournalLogger.log(LOG_CODE, LOG_FACILITY, JournalLogger.INFO, LOG_PREFIX+" "+label, "OK: Assertion passed!");
 			}
 			catch(NumberFormatException nfe){
-				JournalLogger.log(LOG_CODE, LOG_FACILITY, JournalLogger.WARNING, LOG_PREFIX, "String is not a number: " + object);
+				JournalLogger.log(LOG_CODE, LOG_FACILITY, JournalLogger.WARNING, LOG_PREFIX+" "+label, "Failed: String is not a number: " + object);
 			}
 		}else{
-			JournalLogger.log(LOG_CODE, LOG_FACILITY, JournalLogger.WARNING, LOG_PREFIX
-										 , "Received object is not a number, class is " + object.getClass().getCanonicalName());
+			JournalLogger.log(LOG_CODE, LOG_FACILITY, JournalLogger.WARNING, LOG_PREFIX+" "+label
+										 , "Failed: Received object is not a number, class is " + object.getClass().getCanonicalName());
 		
 		}
 		// pipeline
-		IDataCursor pipelineCursor_1 = pipeline.getCursor();
-		IDataUtil.put( pipelineCursor_1, "bAssertionResult", "" + bResult );
-		pipelineCursor_1.destroy();
-			
+		pipelineCursor = pipeline.getCursor();
+		IDataUtil.put( pipelineCursor, "bAssertionResult", "" + bResult );
+		pipelineCursor.destroy();
 		// --- <<IS-END>> ---
 
                 
@@ -76,6 +80,7 @@ public final class object
 	private final static int LOG_CODE=4;
 	private final static int LOG_FACILITY=90;
 	private final static String LOG_PREFIX="Object Assertions";
+		
 	// --- <<IS-END-SHARED>> ---
 }
 
