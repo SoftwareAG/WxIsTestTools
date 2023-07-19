@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Values version="2.0">
-  <value name="node_type">interface</value>
-  <value name="node_nsName">wx.isUtilities.iData.j</value>
-  <value name="is_public">false</value>
   <value name="shared">cHJpdmF0ZSBzdGF0aWMgUGlwZWxpbmVFbGVtZW50SW5mbyBnZXRPYmplY3RGb3JLZXlGcm9tSURh
 dGEoU3RyaW5nIGtleSwgSURhdGEgcmVjb3JkLCBqYXZhLmlvLlN0cmluZ1dyaXRlciBzKSB0aHJv
 d3MgU2VydmljZUV4Y2VwdGlvbnsKCVBpcGVsaW5lRWxlbWVudEluZm8gcGVpID0gbmV3IFBpcGVs
@@ -109,11 +106,8 @@ KykKCQkJCQlhcnJLZXlzLmFkZChiYXNlS2V5K2tleSsiWyIraisiXVsiK2srIl0iKTsKCQkJfQoJ
 CX0KCQllbHNlIGlmICh2YWwgaW5zdGFuY2VvZiBPYmplY3RbXSl7CgkJCWludCBhU2l6ZT0oKE9i
 amVjdFtdKSB2YWwpLmxlbmd0aDsKCQkJZm9yKGludCBqPTA7IGo8YVNpemU7IGorKykKCQkJCWFy
 cktleXMuYWRkKGJhc2VLZXkra2V5KyJbIitqKyJdIik7CgkJfQoJfQoJaWRjLmRlc3Ryb3koKTsK
-fQoJCQ==</value>
+fQoJCQo=</value>
   <value name="encodeutf8">true</value>
-  <value name="extends"></value>
-  <array name="implements" type="value" depth="1">
-  </array>
   <array name="imports" type="value" depth="1">
     <value>com.wm.lang.ns.NSService</value>
     <value>java.util.ArrayList</value>

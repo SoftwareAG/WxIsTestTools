@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Values version="2.0">
-  <value name="node_type">interface</value>
-  <value name="node_nsName">wx.isUtilities.arrays.j</value>
-  <value name="is_public">false</value>
   <value name="shared">cHJpdmF0ZSBzdGF0aWMgUGlwZWxpbmVFbGVtZW50SW5mbyBnZXRPYmplY3RGb3JLZXlGcm9tSURh
 dGEoU3RyaW5nIGtleSwgSURhdGEgcmVjb3JkKXsKCVBpcGVsaW5lRWxlbWVudEluZm8gcGVpID0g
 bmV3IFBpcGVsaW5lRWxlbWVudEluZm8oKTsKCQoJaW50IGlkb2YgPSBrZXkuaW5kZXhPZigiLyIp
@@ -32,11 +29,8 @@ Y29tLndtLnV0aWwuY29kZXIuSURhdGFDb2RhYmxlW10gaWRhID0gKGNvbS53bS51dGlsLmNvZGVy
 LklEYXRhQ29kYWJsZVtdKXZhbDsKCQkJZm9yIChpbnQgbD0wOyBsPGlkYS5sZW5ndGg7IGwrKykK
 CQkJewoJCQkJYXBwZW5kS2V5cyhhcnJLZXlzLCBpZGFbbF0uZ2V0SURhdGEoKSwgYmFzZUtleSAr
 IGtleSArICJbIiArIGwgKyAiXSIsIG91dCk7CgkJCX0KCQl9Cgl9CglpZGMuZGVzdHJveSgpOwp9
-CgkJ</value>
+CgkJCg==</value>
   <value name="encodeutf8">true</value>
-  <value name="extends"></value>
-  <array name="implements" type="value" depth="1">
-  </array>
   <array name="imports" type="value" depth="1">
     <value>com.wm.lang.ns.NSService</value>
     <value>java.util.ArrayList</value>

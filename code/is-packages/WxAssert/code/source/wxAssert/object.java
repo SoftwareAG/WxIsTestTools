@@ -7,6 +7,7 @@ import com.wm.util.Values;
 import com.wm.app.b2b.server.Service;
 import com.wm.app.b2b.server.ServiceException;
 // --- <<IS-START-IMPORTS>> ---
+import com.wm.util.JournalLogger;
 // --- <<IS-END-IMPORTS>> ---
 
 public final class object
@@ -42,10 +43,10 @@ public final class object
 		pipelineCursor.destroy();
 		
 		if (!bExists){
-			com.wm.util.JournalLogger.log(LOG_CODE, LOG_FACILITY, com.wm.util.JournalLogger.WARNING, LOG_PREFIX, "No input received");
+			JournalLogger.log(LOG_CODE, LOG_FACILITY, JournalLogger.WARNING, LOG_PREFIX, "No input received");
 		}
 		else if( null == object ){
-			com.wm.util.JournalLogger.log(LOG_CODE, LOG_FACILITY, com.wm.util.JournalLogger.LOGLEVEL_TRACE, LOG_PREFIX, "Null object received");
+			JournalLogger.log(LOG_CODE, LOG_FACILITY, JournalLogger.WARNING, LOG_PREFIX, "Null object received");
 		}else if (object instanceof Number ){
 			bResult = true;
 		}else if(object instanceof String ){
@@ -54,10 +55,12 @@ public final class object
 				bResult = true;
 			}
 			catch(NumberFormatException nfe){
-				System.out.println("String is not a number: " + object);
+				JournalLogger.log(LOG_CODE, LOG_FACILITY, JournalLogger.WARNING, LOG_PREFIX, "String is not a number: " + object);
 			}
 		}else{
-			System.out.println("Received object is not a number, class is " + object.getClass().getCanonicalName());
+			JournalLogger.log(LOG_CODE, LOG_FACILITY, JournalLogger.WARNING, LOG_PREFIX
+										 , "Received object is not a number, class is " + object.getClass().getCanonicalName());
+		
 		}
 		// pipeline
 		IDataCursor pipelineCursor_1 = pipeline.getCursor();

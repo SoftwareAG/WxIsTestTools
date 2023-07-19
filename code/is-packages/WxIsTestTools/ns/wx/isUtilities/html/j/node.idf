@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Values version="2.0">
-  <value name="encodeutf8">true</value>
   <value name="shared">cHJpdmF0ZSBzdGF0aWMgdm9pZCB3cml0ZVhIVE1MKFN0cmluZyBteUtleSwgSURhdGEgaW4sIGlu
 dCBpbmRlbnQsIGphdmEuaW8uU3RyaW5nV3JpdGVyIG91dCwgU3RyaW5nIGlkSFRNTCwgYm9vbGVh
 biBiUm9vdCkgdGhyb3dzIFNlcnZpY2VFeGNlcHRpb24KewoJSURhdGFDdXJzb3IgaWRjID0gaW4u
@@ -85,10 +84,8 @@ RW5jb2RlRXZlbnR1YWxseVhNTCgiIit2YWwpKyI8L2Rpdj48L2Rpdj4iKTsKCQl9Cgl9CglpZGMu
 ZGVzdHJveSgpOwoJaWYoIWJSb290KQoJCW91dC53cml0ZSgiPC9kaXY+Iik7Cn0KCnByaXZhdGUg
 c3RhdGljIFN0cmluZyBIVE1MRW5jb2RlRXZlbnR1YWxseVhNTChTdHJpbmcgeG1sU3RyaW5nKQp7
 CglpZihudWxsPT14bWxTdHJpbmcpCgkJcmV0dXJuICIiOwkKCXJldHVybiBjb20ud20udXRpbC54
-Zm9ybS5TdHJpbmdEVC5IVE1MRW5jb2RlKHhtbFN0cmluZyk7Cn0KCgk=</value>
-  <value name="extends"></value>
-  <array name="implements" type="value" depth="1">
-  </array>
+Zm9ybS5TdHJpbmdEVC5IVE1MRW5jb2RlKHhtbFN0cmluZyk7Cn0KCgkK</value>
+  <value name="encodeutf8">true</value>
   <array name="imports" type="value" depth="1">
     <value>com.wm.lang.ns.NSService</value>
     <value>java.util.ArrayList</value>

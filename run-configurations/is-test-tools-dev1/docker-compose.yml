@@ -13,6 +13,8 @@ services:
       - ../../code/is-packages/WxAssertTest/:${GUEST_IS_HOME}/packages/WxAssertTest/
       - ../../code/is-packages/WxIsTestTools/:${GUEST_IS_HOME}/packages/WxIsTestTools/
       - ../../code/is-packages/WxIsTestToolsLocalTest/:${GUEST_IS_HOME}/packages/WxIsTestToolsLocalTest/
+      - ../../code/is-packages/WxTestDataGen/:${GUEST_IS_HOME}/packages/WxTestDataGen/
+      - ../../build/msr/:/mnt/build/
     environment:
       - SAG_IS_LICENSE_FILE=/tmp/license.xml
       - SAG_IS_CONFIG_PROPERTIES=/tmp/application.properties
